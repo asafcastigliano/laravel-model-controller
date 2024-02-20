@@ -11,7 +11,19 @@
 
 <body>
 
-
+    <div class="container">
+        <div class="row">
+            @foreach ($films as $film)
+                <div class="card">
+                    <h5>{{ $film->title }}</h5>
+                    <p>{{ $film->original_title }}</p>
+                    <p>{{ $film->nationality }}</p>
+                    <p>{{ $film->date }}</p>
+                    <p>{{ $film->vote }}</p>
+                </div>
+            @endforeach
+        </div>
+    </div>
 
 </body>
 
