@@ -12,6 +12,6 @@ class PageController extends Controller
     {
         $films = Movie::all();
         
-        return view('welcome.blade.php', ['films' => $films]);
+        return view('welcome', ['films' => $films]);
     }
 }
