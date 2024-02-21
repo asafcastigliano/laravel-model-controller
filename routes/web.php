@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\PageController;
 
 
-Route::controller(PageController::class)->group(function () {
-    Route::get('welcome');
-});
+Route::get('/', [PageController::class, 'index']);
 
 Route::get('/', function () {
     return view('welcome');
