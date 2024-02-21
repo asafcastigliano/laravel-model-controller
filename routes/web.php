@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Guest\PageController;
 
-Route::get('/', [Controller::class, 'index']);
+
+Route::controller(PageController::class)->group(function () {
+    Route::get('welcome');
+});
 
 Route::get('/', function () {
     return view('welcome');
